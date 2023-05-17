@@ -1,1 +1,17 @@
-/*# sourceMappingURL=style.css.map */
+@import './reset.css';
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+}
+
+.section-button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+}/*# sourceMappingURL=style.css.map */

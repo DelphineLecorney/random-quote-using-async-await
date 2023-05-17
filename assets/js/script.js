@@ -1,10 +1,11 @@
 const section = document.querySelector('section');
 const resultDiv = document.createElement('div');
+const button = document.querySelector('button');
 const body = document.body;
 body.appendChild(resultDiv);
 
 // Function to fetch name and handle response
-const fetchName = async () => {
+const fetchQuote = async () => {
   try {
     const response = await fetch('https://thatsthespir.it/api');
     const data = await response.json();
@@ -13,11 +14,9 @@ const fetchName = async () => {
     resultDiv.innerHTML = '';
 
     if (data.quote) {
-      // Create and append a div for the result
-      let divResult = document.createElement('div');
-      divResult.textContent = data.quote;
-      divResult.classList.add('quote');
-      section.appendChild(divResult);
+      resultDiv.textContent = data.quote;
+      resultDiv.classList.add('quote');
+      section.appendChild(resultDiv);
     } else {
       console.log('Invalid response format');
     }
@@ -26,4 +25,13 @@ const fetchName = async () => {
   }
 };
 
-fetchName();
+// Function to generate a new quote
+const generateQuote = () => {
+  fetchQuote();
+};
+
+// Add event to the button
+button.addEventListener('click', generateQuote);
+
+// Generate a quote when the page loads
+window.addEventListener('load', generateQuote);
