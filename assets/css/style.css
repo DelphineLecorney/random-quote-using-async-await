@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:ital,wght@0,700;0,900;1,700&family=Lexend+Deca:wght@100;400&family=Red+Hat+Display:wght@500&family=Roboto&display=swap");
 @import './reset.css';
 body {
   background-image: url(../pictures/bgQuote.jpg);
@@ -11,19 +12,66 @@ body {
   height: 100vh;
   width: 100%;
 }
-
-.section-button {
-  background-color: #a79d90;
+body .quote {
+  font-size: 24px;
+  font-family: "Fraunces", serif;
+  color: rgb(114, 110, 110);
+  margin-top: 0px;
+  padding: 30px;
+  border-radius: 70px 10px 70px 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  position: relative;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+body .author {
+  font-style: italic;
+  margin-top: 20px;
+  color: rgb(114, 110, 110);
+  font-size: 18px;
+}
+body .section-button {
+  font-family: "Barlow", serif;
+  background-color: #cdb3a6;
   border: none;
-  color: white;
+  color: rgb(114, 110, 110);
   padding: 15px 32px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 16px;
+  font-size: 20px;
   margin: 100px auto;
   display: block;
   cursor: pointer;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 25% 10%;
+  box-shadow: 4 0 4px 8px 0 rgba(34, 33, 31, 0.4);
   transition: 0.3s ease;
+}
+body .section-button:hover {
+  color: #fff;
+  background-color: #b99c8e;
+}
+@media only screen and (max-width: 600px) {
+  body {
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background-position: center top;
+    background-size: cover;
+  }
+  body .quote {
+    font-size: 18px;
+    padding: 20px;
+    border-radius: 50px;
+    max-width: 100%;
+  }
+  body .section-button {
+    font-size: 16px;
+    margin: 50px auto;
+    max-width: 100%;
+  }
 }/*# sourceMappingURL=style.css.map */

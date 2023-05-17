@@ -1,5 +1,7 @@
 const section = document.querySelector('section');
 const resultDiv = document.createElement('div');
+const authorDiv = document.createElement('div');
+
 const button = document.querySelector('button');
 const body = document.body;
 body.appendChild(resultDiv);
@@ -13,10 +15,15 @@ const fetchQuote = async () => {
     // Clear the result div
     resultDiv.innerHTML = '';
 
-    if (data.quote) {
+    if (data.quote && data.author) {
       resultDiv.textContent = data.quote;
       resultDiv.classList.add('quote');
+
+      authorDiv.textContent = "- " + data.author;
+      authorDiv.classList.add('author');
+
       section.appendChild(resultDiv);
+      section.appendChild(authorDiv);
     } else {
       console.log('Invalid response format');
     }
