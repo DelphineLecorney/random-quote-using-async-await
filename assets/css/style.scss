@@ -1,18 +1,30 @@
 @import './reset.css';
 
-body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    width: 100%;
+body {    
+  background-image: url(../pictures/bgQuote.jpg);
+  background-size: cover;
+  position: relative;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
 }
+
 .section-button {
-  background-color: #4CAF50;
+  background-color: #a79d90;
   border: none;
   color: white;
   padding: 15px 32px;
   text-align: center;
-
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 100px auto;
+  display: block;
+  cursor: pointer;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s ease;
 }
