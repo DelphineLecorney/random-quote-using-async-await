@@ -12,6 +12,10 @@ body.appendChild(resultDiv);
 // Function to fetch quote, author, and photo URL
 const fetchQuote = async () => {
   try {
+    // Show the loader
+    const loader = document.getElementById('loader');
+    loader.classList.remove('hidden');
+
     const response = await fetch('https://thatsthespir.it/api');
     const data = await response.json();
 
@@ -38,7 +42,7 @@ const fetchQuote = async () => {
 
       if (ageData.age) {
         const ageDiv = document.createElement('div');
-        ageDiv.textContent = `Age: ${ageData.age}`;
+        ageDiv.textContent = `Age estimated: ${ageData.age}`;
         ageDiv.classList.add('age');
         section.appendChild(ageDiv);
       }
@@ -47,6 +51,10 @@ const fetchQuote = async () => {
     }
   } catch (error) {
     console.log('There was an error!', error);
+  } finally {
+    // Hide the loader
+    const loader = document.getElementById('loader');
+    loader.classList.add('hidden');
   }
 };
 

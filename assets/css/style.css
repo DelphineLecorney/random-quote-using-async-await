@@ -28,7 +28,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 50px;
+  margin-top: 70px;
 }
 
 .section-button {
@@ -44,7 +44,6 @@ body {
   padding: 15px 15px;
   margin-top: 60px;
 }
-
 .section-button:hover {
   color: #fff;
   background-color: #b99c8e;
@@ -59,31 +58,53 @@ body {
   max-width: 500px;
   text-align: center;
   padding: 30px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   margin-left: auto;
   margin-right: auto;
 }
 
 .author {
   font-style: italic;
-  margin-bottom: 10px;
   color: rgb(114, 110, 110);
-  font-size: 18px;
+  font-size: 20px;
 }
 
 .photo {
-  width: 200px;
-  height: 200px;
+  width: 250px;
+  height: 250px;
   -o-object-fit: cover;
      object-fit: cover;
-  border-radius: 50%;
-  margin-bottom: 10px;
+  border-radius: 30%;
+  margin-bottom: 30px;
 }
 
 .age {
   font-size: 18px;
   color: #888;
-  margin-top: 40px;
+  margin-top: 50px;
+}
+
+.loader {
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #827e7c;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 3s linear infinite;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.hidden {
+  display: none;
 }
 
 @media only screen and (max-width: 800px) {

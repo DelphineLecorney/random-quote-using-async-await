@@ -12,6 +12,7 @@
 > DOM manipulation : modify the DOM according to the result of the request.
 > > Don't forget HTML semantics (blockquote..)
 
+### Steps
 
 - Send a request to a remote server via javascript using async/await and try/catch.
 - Treat the answer :
@@ -21,7 +22,9 @@
 - Make it look good via CSS (inspiration).
 - Publish it as a GitHub Page
 
-
+### Bonus
+Use the agify API to guess the age of the authors
+Implement loader wihle the request is pending
 
 
 
@@ -31,10 +34,13 @@
 
 ###  References
 
-> [Try..catch](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Statements/try...catch)
+> > [Try..catch](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Statements/try...catch)
 [Async](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Statements/async_function "Async")
 [API](https://thatsthespir.it/)
 
+> [keyframes](https://developer.mozilla.org/fr/docs/Web/CSS/@keyframes "keyframes")(https://codepen.io/teerapuch/pen/vLJXeR)
+
+[loader](https://projects.lukehaas.me/css-loaders/ "loader")(https://www.cssportal.com/css-loader-generator/)
 <br>
 
 👯 ** I like javascript and I discover JSON with fetch, API and DOM !**  👯
