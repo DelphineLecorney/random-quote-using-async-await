@@ -2,6 +2,7 @@ const section = document.querySelector('section');
 const resultDiv = document.createElement('div');
 const image = document.createElement('img');
 const authorDiv = document.createElement('div');
+const estimatedAge = 'https://api.agify.io/';
 
 
 const button = document.querySelector('button');
@@ -17,7 +18,7 @@ const fetchQuote = async () => {
     // Clear the result div
     resultDiv.innerHTML = '';
 
-    if (data.quote && data.photo && data.author ) {
+    if (data.quote && data.photo && data.author) {
       resultDiv.textContent = data.quote;
       resultDiv.classList.add('quote');
 
@@ -27,12 +28,20 @@ const fetchQuote = async () => {
       authorDiv.textContent = "- " + data.author;
       authorDiv.classList.add('author');
 
-
-
       section.appendChild(resultDiv);
       section.appendChild(image);
       section.appendChild(authorDiv);
-      
+
+      // Fetch age data from Agify.io
+      const ageResponse = await fetch(`${estimatedAge}?name=${data.author}`);
+      const ageData = await ageResponse.json();
+
+      if (ageData.age) {
+        const ageDiv = document.createElement('div');
+        ageDiv.textContent = `Age: ${ageData.age}`;
+        ageDiv.classList.add('age');
+        section.appendChild(ageDiv);
+      }
     } else {
       console.log('Invalid response format');
     }
@@ -40,6 +49,7 @@ const fetchQuote = async () => {
     console.log('There was an error!', error);
   }
 };
+
 
 // Function to generate a new quote
 const generateQuote = () => {
