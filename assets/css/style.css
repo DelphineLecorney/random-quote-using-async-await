@@ -8,7 +8,7 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  margin: 0;
+  margin-bottom: -20px;
 }
 
 .button-container {
@@ -81,7 +81,7 @@ body {
 .age {
   font-size: 18px;
   color: #888;
-  margin-top: 50px;
+  margin-top: 90px;
 }
 
 .loader {
