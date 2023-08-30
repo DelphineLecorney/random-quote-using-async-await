@@ -1,7 +1,8 @@
 # random-quote-using-async-await
 # ✨ random-quote-using-async-await ✨
 
-> ## Hi ! I'm Delphine !
+
+[Link to Random Quotes](https://delphinelecorney.github.io/random-quote-using-async-await/)
 > #### This is an exercise in Becode training.
 
 ------------
